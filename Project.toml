@@ -1,0 +1,16 @@
+name = "GraphAlgorithms"
+uuid = "d870f0a7-cf90-4af7-a874-c0fe902e0652"
+authors = ["Víctor Baena <victormage@hotmail.com>"]
+version = "0.1.0"
+
+[deps]
+GLPK = "60bf3e95-4087-53dc-ae20-288a0d20c6a6"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+SimpleWeightedGraphs = "47aef6b3-ad0c-573a-a1e2-d07658019622"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

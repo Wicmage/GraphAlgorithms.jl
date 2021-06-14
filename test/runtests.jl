@@ -13,6 +13,10 @@ GRAPHS = Dict{String,Graph}(
     "tutte" => smallgraph(:tutte),
     "complete20" => complete_graph(20)
 )
+WEIGHTED_GRAPHS = Dict{String,SimpleWeightedGraph}(
+    ""
+)
+
 
 tests = [
     "operators.jl",

@@ -7,21 +7,19 @@ function largest_independents_set(graph::AbstractGraph)
 end
 
 function largest_clique_number(graph::AbstractGraph)
-    number = 0
-    max_cliques = maximal_cliques(graph)
-    for clique = max_cliques
-        lc=length(clique)
-        number = lc>number ? lc : number
-    end
-    return number
+    return length(largest_cliques_set(graph)[1])
 end
 
 function largest_cliques_set(graph::AbstractGraph)
     max_cliques = maximal_cliques(graph)
     largest_cliques = Vector{Vector{Integer}}()
-    largest=largest_clique_number(graph)
+    number = 0
     for clique = max_cliques
-        if length(clique)==largest; push!(largest_cliques, clique) end
+        lc=length(clique)
+        number = lc>number ? lc : number
+    end
+    for clique = max_cliques
+        if length(clique)==number; push!(largest_cliques, clique) end
     end
 
     return largest_cliques
